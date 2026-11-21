@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sage: #8C9A84;
+  --color-sage-dark: #434E3D;
+  --color-sage-light: #B2BEAB;
+  --color-sage-tint: #9EAA96;
+  --color-cream: #EFECE6;
+  --color-cream-pure: #F9F8F5;
+  --color-ink: #222620;
+  --color-ink-soft: rgba(34, 38, 32, 0.76);
+
+  --font-display: 'Anton', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-hand: 'Caveat', cursive;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  :root {
+    --sage-main: #8C9A84;
+    --sage-dark: #434E3D;
+    --sage-light: #B2BEAB;
+    --cream: #EFECE6;
+    --cream-pure: #F9F8F5;
+    --ink: #222620;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--sage-main);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Subtle Paper Grain Effect */
+.paper-texture {
+  background-color: #8C9A84;
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0),
+    radial-gradient(rgba(34, 38, 32, 0.04) 1px, transparent 0);
+  background-size: 24px 24px, 16px 16px;
+  background-position: 0 0, 8px 8px;
+}
+
+/* Tactile Washi Tape Strip */
+.washi-tape {
+  background: rgba(239, 236, 230, 0.88);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 2px 6px rgba(34, 38, 32, 0.16);
+  border-left: 1px dashed rgba(67, 78, 61, 0.25);
+  border-right: 1px dashed rgba(67, 78, 31, 0.25);
+}
+
+/* Scalloped Postage Stamp Border Frame */
+.postage-frame {
+  background: var(--sage-dark);
+  padding: 16px;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 0 18px 36px -10px rgba(34, 38, 32, 0.38);
+}
+
+.postage-frame::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 10px;
+  background:
+    radial-gradient(circle, transparent 6px, var(--sage-dark) 6.5px) -8px -8px / 24px 24px repeat;
+  z-index: -1;
+}
+
+/* Binder Clip Element */
+.binder-clip {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 20px;
+  background: #2b3127;
+  border-radius: 4px 4px 0 0;
+  box-shadow: inset 0 -2px 0 rgba(255, 255, 255, 0.18), 0 4px 6px rgba(0, 0, 0, 0.25);
+  z-index: 20;
+}
+
+.binder-clip::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  right: 8px;
+  height: 8px;
+  border: 2px solid #B2BEAB;
+  border-radius: 2px;
+}
+
+/* Polaroid Card Style */
+.polaroid-card {
+  background-color: var(--cream-pure);
+  border: 2px solid var(--sage-dark);
+  box-shadow: 0 4px 0 rgba(67, 78, 61, 0.2), 0 12px 24px -6px rgba(34, 38, 32, 0.22);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.polaroid-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 0 rgba(67, 78, 61, 0.25), 0 18px 28px -6px rgba(34, 38, 32, 0.26);
+}
+
+/* Tactile Zine Button */
+.zine-btn-primary {
+  background-color: #434E3D;
+  color: #EFECE6;
+  border: 2px solid #434E3D;
+  box-shadow: 0 3px 0 #222620;
+  transition: transform 0.14s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.14s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.16s ease;
+}
+
+.zine-btn-primary:hover {
+  background-color: #2f382b;
+}
+
+.zine-btn-primary:active {
+  transform: translateY(3px);
+  box-shadow: 0 0 0 #222620;
+}
+
+.zine-btn-secondary {
+  background-color: #EFECE6;
+  color: #434E3D;
+  border: 2px solid #434E3D;
+  box-shadow: 0 3px 0 #434E3D;
+  transition: transform 0.14s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.14s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.16s ease;
+}
+
+.zine-btn-secondary:hover {
+  background-color: #F9F8F5;
+}
+
+.zine-btn-secondary:active {
+  transform: translateY(3px);
+  box-shadow: 0 0 0 #434E3D;
+}
+
+/* Striped Ticket Edge Effect */
+.striped-header {
+  background-image: repeating-linear-gradient(
+    90deg,
+    #B2BEAB 0px,
+    #B2BEAB 24px,
+    #EFECE6 24px,
+    #EFECE6 48px
+  );
+}
+
+/* Perforated Ticket Divider */
+.ticket-divider {
+  border-top: 2px dashed rgba(67, 78, 61, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .polaroid-card:hover {
+    transform: none;
+  }
+}

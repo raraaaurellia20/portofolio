@@ -1,0 +1,697 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Azzahra Aurellia Putri | Developer Creator &amp; Software Engineer</title>
+<!-- Google Fonts: Anton (Display), Plus Jakarta Sans (Body), Caveat (Handwritten) -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Caveat:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration matching the Design Tokens -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sage: {
+              DEFAULT: '#8C9A84',
+              dark: '#434E3D',
+              light: '#B2BEAB',
+              tint: '#9EAA96'
+            },
+            cream: {
+              DEFAULT: '#EFECE6',
+              pure: '#F9F8F5'
+            },
+            ink: {
+              DEFAULT: '#222620',
+              soft: 'rgba(34, 38, 32, 0.76)'
+            }
+          },
+          fontFamily: {
+            display: ['Anton', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            hand: ['Caveat', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Base & Zine Styling -->
+<style data-purpose="zine-tactile-styling">
+    :root {
+      --sage-main: #8C9A84;
+      --sage-dark: #434E3D;
+      --sage-light: #B2BEAB;
+      --cream: #EFECE6;
+      --cream-pure: #F9F8F5;
+      --ink: #222620;
+    }
+
+    body {
+      background-color: var(--sage-main);
+      color: var(--ink);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Subtle Paper Grain Effect */
+    .paper-texture {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0);
+      background-size: 24px 24px;
+    }
+
+    /* Tactile Washi Tape Strip */
+    .washi-tape {
+      background: rgba(239, 236, 230, 0.85);
+      backdrop-filter: blur(2px);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+      transform: rotate(-2deg);
+    }
+
+    /* Scalloped Postage Stamp Border Frame */
+    .postage-frame {
+      background: var(--sage-dark);
+      padding: 16px;
+      position: relative;
+      border-radius: 4px;
+      box-shadow: 0 16px 32px -8px rgba(34, 38, 32, 0.35);
+    }
+
+    .postage-frame::before {
+      content: "";
+      position: absolute;
+      inset: -8px;
+      border-radius: 8px;
+      background:
+        radial-gradient(circle, transparent 6px, var(--sage-dark) 6.5px) -8px -8px/24px 24px repeat;
+      z-index: -1;
+    }
+
+    /* Retro Ticker Tape Strip */
+    .ticker-bar {
+      background: #434E3D;
+      color: #EFECE6;
+      letter-spacing: 0.18em;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    /* Binder Clip Element */
+    .binder-clip {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 42px;
+      height: 20px;
+      background: #2b3127;
+      border-radius: 4px 4px 0 0;
+      box-shadow: inset 0 -2px 0 rgba(255,255,255,0.2), 0 4px 6px rgba(0,0,0,0.25);
+      z-index: 20;
+    }
+    .binder-clip::after {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 7px;
+      right: 7px;
+      height: 8px;
+      border: 2px solid #B2BEAB;
+      border-radius: 2px;
+    }
+
+    /* Polaroid Card Style */
+    .polaroid-card {
+      background-color: var(--cream-pure);
+      box-shadow: 0 10px 25px -5px rgba(34, 38, 32, 0.25), 0 8px 10px -6px rgba(34, 38, 32, 0.1);
+      transition: transform 0.25s cubic-bezier(.25, .8, .25, 1);
+    }
+    .polaroid-card:hover {
+      transform: translateY(-4px) rotate(0.5deg);
+    }
+
+    /* Striped Ticket Edge Effect */
+    .striped-header {
+      background-image: repeating-linear-gradient(
+        90deg,
+        #B2BEAB 0px,
+        #B2BEAB 24px,
+        #EFECE6 24px,
+        #EFECE6 48px
+      );
+    }
+  </style>
+<!-- END: Base & Zine Styling -->
+</head>
+<body class="paper-texture min-h-screen antialiased selection:bg-sage-dark selection:text-cream">
+<!-- BEGIN: Site Header & Navigation -->
+<header class="sticky top-0 z-50 bg-[#8C9A84]/95 backdrop-blur-md border-b border-sage-dark/20 transition-all">
+<div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+<!-- Signature / Monogram -->
+<a class="flex items-center gap-2 group" href="#hero">
+<span class="w-9 h-9 rounded-full bg-sage-dark text-cream flex items-center justify-center font-display text-lg tracking-wider group-hover:bg-cream group-hover:text-sage-dark transition-colors">
+          AA
+        </span>
+<span class="font-display tracking-tight text-xl text-cream hidden sm:inline">AZZAHRA.DEV</span>
+</a>
+<!-- Navigation Links -->
+<nav class="flex items-center space-x-6 sm:space-x-8 text-xs sm:text-sm font-bold tracking-widest text-cream uppercase">
+<a class="hover:text-sage-dark transition-colors duration-200" href="#about">About</a>
+<a class="hover:text-sage-dark transition-colors duration-200" href="#niches">Focus</a>
+<a class="hover:text-sage-dark transition-colors duration-200" href="#results">Projects</a>
+<a class="hover:text-sage-dark transition-colors duration-200" href="#packages">Services</a>
+<a class="hover:text-sage-dark transition-colors duration-200 hidden md:inline" href="#testimonials">Reviews</a>
+<a class="hover:text-sage-dark transition-colors duration-200" href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+<!-- END: Site Header & Navigation -->
+<main class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-20 sm:space-y-28">
+<!-- BEGIN: Hero Section -->
+<section class="relative pt-4 sm:pt-10 pb-6" data-purpose="hero-section" id="hero">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Postage Stamp Portrait Frame (Left Column) -->
+<div class="lg:col-span-5 flex justify-center order-2 lg:order-1">
+<div class="relative group">
+<!-- Decorative Postage Outer Container -->
+<div class="postage-frame p-3 sm:p-4 rounded-xl rotate-[-1.5deg] group-hover:rotate-0 transition-transform duration-300">
+<div class="overflow-hidden rounded border border-sage-light/30 aspect-[4/5] w-[260px] sm:w-[320px] bg-sage-dark">
+<img alt="Azzahra Aurellia Putri smiling portrait" class="w-full h-full object-cover grayscale contrast-125 brightness-95 hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPrOCIYhS4RcRM6Qe4MQcXGRWwaWYSBFWIH7BIkJwhWzJx5t6OjGfl_ZDILmFTxFZcPf3HgTky-k-7RNhq0821jLZipIE1KUiCPCJRI00SLcmj7Yueb4EFUfboamazigsDujkcB9dj1w2S_UenOYqiOVy06FfsI_jMX4N9CJnpegKUrxKOIOw3xfWX6gIuki-8yDsNE2ySFt9DkLV1ilWVIxZ6chTsTMTsytTnrvBjgonsYzWvPpdlAA">
+</div>
+<div class="mt-3 flex items-center justify-between px-1 text-cream/70 text-[11px] font-mono tracking-widest uppercase">
+<span>EST. 2024 / JAKARTA</span>
+<span>ID • AZZAHRA</span>
+</div>
+</div>
+<!-- Tape sticker accent -->
+<div class="washi-tape absolute -top-4 -right-3 px-4 py-1 font-hand text-ink font-bold text-lg rotate-6 shadow-sm">
+              developer &amp; creator ✦
+            </div>
+</div>
+</div>
+<!-- Hero Headline & Value Pitch (Right Column) -->
+<div class="lg:col-span-7 flex flex-col justify-center text-center lg:text-left order-1 lg:order-2">
+<div class="inline-flex items-center justify-center lg:justify-start gap-2 text-sage-dark font-semibold text-xs tracking-widest uppercase mb-2">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-900 animate-pulse"></span>
+            Institut Teknologi PLN • Information Systems Undergraduate
+          </div>
+<h1 class="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-display text-cream leading-[0.9] tracking-tight uppercase drop-shadow-sm">
+            AZZAHRA<br>AURELLIA
+          </h1>
+<p class="mt-6 text-base sm:text-lg text-cream/90 font-medium max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            Authentic, high-converting digital products, modern web engineering, and developer content bridging technical systems with intuitive design.
+          </p>
+<!-- Call to Actions -->
+<div class="mt-8 flex flex-wrap gap-4 items-center justify-center lg:justify-start">
+<a class="px-7 py-3.5 bg-sage-dark hover:bg-ink text-cream font-bold text-sm tracking-wider uppercase rounded-full shadow-lg hover:shadow-xl transition-all duration-200" href="#results">
+              View My Work
+            </a>
+<a class="px-7 py-3.5 bg-cream hover:bg-cream-pure text-sage-dark font-bold text-sm tracking-wider uppercase rounded-full border border-sage-dark/20 shadow-md hover:shadow-lg transition-all duration-200" href="#contact">
+              Book a Call
+            </a>
+</div>
+<!-- Micro Stats Badges -->
+<div class="mt-10 pt-6 border-t border-sage-dark/25 flex items-center justify-center lg:justify-start gap-8 text-cream">
+<div>
+<span class="block font-display text-2xl text-cream">3+ YRS</span>
+<span class="text-xs uppercase tracking-wider text-cream/80">Coding &amp; Content</span>
+</div>
+<div class="w-px h-8 bg-sage-dark/30"></div>
+<div>
+<span class="block font-display text-2xl text-cream">15+ PROJS</span>
+<span class="text-xs uppercase tracking-wider text-cream/80">Shipped Live</span>
+</div>
+<div class="w-px h-8 bg-sage-dark/30"></div>
+<div>
+<span class="block font-display text-2xl text-cream">45K+</span>
+<span class="text-xs uppercase tracking-wider text-cream/80">Community Reach</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Hero Section -->
+<!-- BEGIN: About Me Section -->
+<section class="scroll-mt-24" data-purpose="about-section" id="about">
+<div class="bg-cream rounded-2xl p-6 sm:p-10 shadow-xl border border-sage-light relative overflow-hidden">
+<!-- Top Striped Edge Detail -->
+<div class="striped-header h-4 -mx-6 sm:-mx-10 -mt-6 sm:-mt-10 mb-8 border-b border-sage-light"></div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<!-- Editorial Text Card (Left) -->
+<div class="md:col-span-7 space-y-4">
+<div class="inline-block bg-sage-dark text-cream text-xs font-bold tracking-widest px-3 py-1 uppercase rounded-sm mb-2">
+              Background &amp; Story
+            </div>
+<h2 class="text-4xl sm:text-5xl font-display text-sage-dark tracking-tight uppercase leading-none">
+              ABOUT ME
+            </h2>
+<p class="text-ink leading-relaxed text-sm sm:text-base font-medium">
+              I’m an Information Systems undergraduate at <strong>Institut Teknologi PLN</strong>, developer creator, and aspiring software engineer with over 3 years of experience crafting interactive web systems that actually connect with users.
+            </p>
+<p class="text-ink leading-relaxed text-sm sm:text-base">
+              I started out sharing honest tutorials and product breakdowns on tech communities. Today, I assist startups, tech brands, and student organizations build full-stack web applications, optimize user experience, and create educational tech content that demystifies modern cloud tools.
+            </p>
+<div class="pt-4 flex flex-wrap gap-2 text-xs font-bold text-sage-dark uppercase">
+<span class="bg-sage-light/40 px-3 py-1.5 rounded-full">#FrontendCraft</span>
+<span class="bg-sage-light/40 px-3 py-1.5 rounded-full">#PLNInnovation</span>
+<span class="bg-sage-light/40 px-3 py-1.5 rounded-full">#CreatorTech</span>
+<span class="bg-sage-light/40 px-3 py-1.5 rounded-full">#UIUXEngineering</span>
+</div>
+</div>
+<!-- Polaroid Photo with Binder Clip (Right) -->
+<div class="md:col-span-5 flex justify-center">
+<div class="polaroid-card p-4 pb-6 rounded-lg max-w-[280px] w-full relative rotate-2 hover:rotate-0 transition-transform">
+<div class="binder-clip"></div>
+<div class="overflow-hidden rounded aspect-[4/5] bg-sage-light">
+<img alt="Azzahra working on code and digital media" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb4S4TGIAPzdY17KmsgUNdLfVY-LSq0Ej5qUVoFJtKEqt9sVDipWoyDMlj1GZlUjggpZfTNiydMzhqaGXylIK8L5bkXFoEzTgbzd5rFYy1_WAaK7oxN3b5FRHS9NPltWp44PHN9I9ViQdX4-R-PS5DdqO43CLZYr7pS2JVMxMstaRUDxKEksFHKzXpb6nVcsRNPTD2mx0RtEYDw5hDyVu2ExWySTdYMUa8lzigRx6y">
+</div>
+<div class="mt-4 text-center">
+<p class="font-hand text-2xl font-bold text-sage-dark">Azzahra Aurellia (Aurel)</p>
+<p class="text-[11px] font-mono uppercase text-ink-soft tracking-wider">Jakarta, Indonesia • 2026</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: About Me Section -->
+<!-- BEGIN: Focus Niches / Core Disciplines -->
+<section class="scroll-mt-24" data-purpose="niches-section" id="niches">
+<div class="text-center mb-10">
+<h2 class="text-4xl sm:text-5xl font-display text-cream uppercase tracking-tight">
+          FOCUS AREAS
+        </h2>
+<p class="font-hand text-2xl text-cream/90 mt-1">
+          ✦ What I specialize in &amp; ship consistently ✦
+        </p>
+</div>
+<!-- 4 Niches Grid with Scrapbook Card Aesthetics -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+<!-- Niche 1 -->
+<div class="bg-cream-pure p-6 rounded-xl border-2 border-sage-dark/30 text-center relative group hover:-translate-y-1 transition-all">
+<div class="text-3xl mb-3">💻</div>
+<h3 class="font-display text-lg text-sage-dark uppercase tracking-tight">Web Engineering</h3>
+<p class="text-xs text-ink/80 mt-2 font-medium">Responsive modern web applications with clean, scalable, accessible code.</p>
+<span class="inline-block mt-3 text-[10px] uppercase font-mono tracking-widest text-sage-dark/70 font-bold">React • Node • TS</span>
+</div>
+<!-- Niche 2 -->
+<div class="bg-cream-pure p-6 rounded-xl border-2 border-sage-dark/30 text-center relative group hover:-translate-y-1 transition-all">
+<div class="text-3xl mb-3">⚡</div>
+<h3 class="font-display text-lg text-sage-dark uppercase tracking-tight">Systems &amp; Cloud</h3>
+<p class="text-xs text-ink/80 mt-2 font-medium">Information architecture, database structures, and smart utility IoT integrations.</p>
+<span class="inline-block mt-3 text-[10px] uppercase font-mono tracking-widest text-sage-dark/70 font-bold">SQL • AWS • Firebase</span>
+</div>
+<!-- Niche 3 -->
+<div class="bg-cream-pure p-6 rounded-xl border-2 border-sage-dark/30 text-center relative group hover:-translate-y-1 transition-all">
+<div class="text-3xl mb-3">🎨</div>
+<h3 class="font-display text-lg text-sage-dark uppercase tracking-tight">UI/UX Design</h3>
+<p class="text-xs text-ink/80 mt-2 font-medium">Editorial layouts, wireframes, and design system components centered on human delight.</p>
+<span class="inline-block mt-3 text-[10px] uppercase font-mono tracking-widest text-sage-dark/70 font-bold">Figma • Prototyping</span>
+</div>
+<!-- Niche 4 -->
+<div class="bg-cream-pure p-6 rounded-xl border-2 border-sage-dark/30 text-center relative group hover:-translate-y-1 transition-all">
+<div class="text-3xl mb-3">📹</div>
+<h3 class="font-display text-lg text-sage-dark uppercase tracking-tight">Tech Content</h3>
+<p class="text-xs text-ink/80 mt-2 font-medium">Digestible technical tutorials, workflow reels, and community developer evangelism.</p>
+<span class="inline-block mt-3 text-[10px] uppercase font-mono tracking-widest text-sage-dark/70 font-bold">TikTok • YouTube • Dev.to</span>
+</div>
+</div>
+<!-- Ticker Tape Strip -->
+<div class="ticker-bar mt-10 py-3 px-4 rounded overflow-hidden flex justify-around text-center uppercase whitespace-nowrap shadow-inner">
+<span>UGC • CODE • TECH DOCS • REELS • DEV ADVOCACY • WEB APPS • SYSTEMS DESIGN • IT PLN</span>
+</div>
+</section>
+<!-- END: Focus Niches -->
+<!-- BEGIN: Why Work With Me? (Value Props) -->
+<section class="scroll-mt-24" data-purpose="why-work-with-me">
+<div class="bg-sage-dark text-cream p-8 sm:p-12 rounded-2xl shadow-2xl relative">
+<div class="max-w-2xl mx-auto text-center mb-12">
+<h2 class="text-4xl sm:text-5xl font-display uppercase tracking-tight">
+            WHY WORK WITH ME?
+          </h2>
+<p class="font-hand text-2xl text-sage-light mt-1">
+            Bridging technical precision with creative visual storytelling
+          </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="bg-sage/20 border border-sage-light/20 p-5 rounded-xl text-center flex flex-col items-center">
+<div class="w-14 h-14 rounded-full overflow-hidden mb-3 border-2 border-cream/40">
+<img alt="Code snippet" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaOzb-0Ku0GCrF9jTlDWIW2ZyKvaY2-VK877mY3e7n7qTMTP64DfnNi77cToqCYlp6iyocceKJK_38cr1bclwGNxwkfQM4DQtE7ClYwujnnT_Eem5uv3S5CSnxFzpeonC8tUcpI0pT2MpKDkD8Rqp48_JL6cDgP5JSAoHBivcn_Ky4z-t3sz_orSQ3FNzsohkmG6pxV9KNhu4KmNNs_uB4URkdGpzJEB58TmV3WPNC">
+</div>
+<h4 class="font-display text-base tracking-wide uppercase text-cream">Robust &amp; Clean Code</h4>
+<p class="text-xs text-cream/80 mt-2 leading-relaxed">
+              Standardized semantic structure, maintainable component code, and performance optimization right out of the box.
+            </p>
+</div>
+<!-- Card 2 -->
+<div class="bg-sage/20 border border-sage-light/20 p-5 rounded-xl text-center flex flex-col items-center">
+<div class="w-14 h-14 rounded-full overflow-hidden mb-3 border-2 border-cream/40">
+<img alt="Community team" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwPcyYnPOP4zWaXmdvHLwb0Etdw-9fSu-oUcs_FGk8Ges8CGOtu7ge6kOLDYYdogF7PIoG3fVnn2gAHsMyuSCY2znXCIhssr60qQ2nQGPAwDSSBgb58VVt6uu8KnbKOdMiUtPSl7eWQKtfBl-5wQnN7B3Y3aTF_jp8sQjWw05NIFLn-sN3ZAcQdbQ3002sP6nD2Ay9miTxfZxlMxvk_l_XzwxXka6NPqA8a5B26jsn">
+</div>
+<h4 class="font-display text-base tracking-wide uppercase text-cream">Community Driven</h4>
+<p class="text-xs text-cream/80 mt-2 leading-relaxed">
+              Active student lead with authentic ties to academic, developer, and student tech ecosystems across Jakarta.
+            </p>
+</div>
+<!-- Card 3 -->
+<div class="bg-sage/20 border border-sage-light/20 p-5 rounded-xl text-center flex flex-col items-center">
+<div class="w-14 h-14 rounded-full overflow-hidden mb-3 border-2 border-cream/40">
+<img alt="Laptop setup" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaSiIvccpvVDJANFf0e8dRlC50PIB-I5735z2yPgjbQB1SDe5hyB1Igo3KyGE1U8C8IMVFDtGQBAOKxhMe3fiiTJ04M2S2Uhtc0HfCvQHzC-hWm2iXbx-0T-o9TnXRX5hdUyGcWy47ySwHLQ8c7vWsSzl0vRwZw5P5GqbcgWnqWqV4ysK4lRCcbvBtc4igF0X_VvlJAlOuNTgWz8EvH5wz-b5fJCdT7-DL4u0_wDcU">
+</div>
+<h4 class="font-display text-base tracking-wide uppercase text-cream">End-to-End Delivery</h4>
+<p class="text-xs text-cream/80 mt-2 leading-relaxed">
+              From requirement gathering, Figma user journeys, and database modeling, through deployment and documentation.
+            </p>
+</div>
+<!-- Card 4 -->
+<div class="bg-sage/20 border border-sage-light/20 p-5 rounded-xl text-center flex flex-col items-center">
+<div class="w-14 h-14 rounded-full overflow-hidden mb-3 border-2 border-cream/40">
+<img alt="Authentic portrait" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAat3gmImBJU6pngNhLeZ6SExDzudUxXxzANWtXYxJug_9DyXy7RkCvAgMmUx7EvYAS4UP9mEoN0_HMIG7RFowDnxhdt937wzF0qjXL9q_pOKv1GNwy0sDokaZrwAOGhj9rFW5I4zxl97W7iK3oTSnDO6W1uYP8EBhMoJ7KdT-6HzzRUOFwEpdWc95kt-BvhCpz3nu3eL_wfxiorXtknSGdCo8w9cw1hbIbSPvJ_8Bq">
+</div>
+<h4 class="font-display text-base tracking-wide uppercase text-cream">Creator Mindset</h4>
+<p class="text-xs text-cream/80 mt-2 leading-relaxed">
+              Content is never sterile or scripted; technical ideas are presented in engaging, intuitive, and modern formats.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Why Work With Me? -->
+<!-- BEGIN: Projects & Proven Results -->
+<section class="scroll-mt-24" data-purpose="projects-results-section" id="results">
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+<div>
+<h2 class="text-4xl sm:text-5xl font-display text-cream uppercase tracking-tight">
+            RESULTS &amp; WORKS
+          </h2>
+<p class="font-hand text-2xl text-cream/90">Curated showcase of high-impact platforms &amp; campaigns</p>
+</div>
+<span class="text-xs font-mono uppercase tracking-widest text-sage-dark bg-cream px-4 py-1.5 rounded-full font-bold">
+          2024 — 2026 Archive
+        </span>
+</div>
+<!-- 3 Polaroid Project Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+<!-- Project 1 -->
+<article class="polaroid-card p-4 rounded-xl flex flex-col justify-between">
+<div>
+<div class="relative overflow-hidden rounded-lg aspect-[16/10] bg-slate-200 mb-4 border border-sage-light">
+<img alt="PLN Smart Energy Monitoring Dashboard" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOITX_2uahaNg9wXQVZbudgK-3fnTjl71_dICQpLM1j0OiqXZXFelLRojc3AQm7HLLfN6bG9wecIF0ZIYMYR1b3Vz7HU3xc6aRa3FYsJBK83FI9c_3rEus3FWnwtMGSNEslDtquP844Y79ezVFQ0P_ynIkC1r9MItd81e15mHMtTkE9C90MFQpqa0svLg7XMal2A16MLL2Rd2_yzq-nN5-cDixL9KhMkXm2xtlsNVs">
+<span class="absolute top-2 left-2 bg-sage-dark text-cream text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
+                Full-Stack App
+              </span>
+</div>
+<h3 class="font-display text-xl text-sage-dark uppercase tracking-tight">PLN Smart Energy Monitor</h3>
+<p class="text-xs text-ink/80 mt-2 font-medium leading-relaxed">
+              Real-time campus electricity metering dashboard utilizing IoT sensor feeds, anomaly detection, and interactive energy load charts.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-sage-light/30 flex items-center justify-between text-xs font-bold text-sage-dark">
+<span class="bg-sage-light/30 px-2.5 py-1 rounded">2.4k Peak Users</span>
+<span class="bg-sage-light/30 px-2.5 py-1 rounded">-38% Energy Waste</span>
+</div>
+</article>
+<!-- Project 2 -->
+<article class="polaroid-card p-4 rounded-xl flex flex-col justify-between">
+<div>
+<div class="relative overflow-hidden rounded-lg aspect-[16/10] bg-slate-200 mb-4 border border-sage-light">
+<img alt="Campus Student Developer Hub Community" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJslgOFDPaJa9eSjJS0SzO6_IFPGN4k_cp-4dhrwP-51DQrYVOhaJpPQwoPKrKFralLIUDWNfUkSSYnsdbVpfb77tWqUTsy78gehLqVCZzLA9p05COGb1FpArMsc150aV7uZabPO9eGD4X3KQavYi84dji2iNreOlM_ei45ljQDyZDjzON8irqtIOmaJtzqnGUlSrMxHHE6bSRy9ZcFk7OrLZ4n9io3asZhSAQgbw0">
+<span class="absolute top-2 left-2 bg-sage-dark text-cream text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
+                Platform &amp; Docs
+              </span>
+</div>
+<h3 class="font-display text-xl text-sage-dark uppercase tracking-tight">Campus Community Hub</h3>
+<p class="text-xs text-ink/80 mt-2 font-medium leading-relaxed">
+              Centralized platform for peer mentoring, event registrations, and hackathon project voting designed for IT PLN engineers.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-sage-light/30 flex items-center justify-between text-xs font-bold text-sage-dark">
+<span class="bg-sage-light/30 px-2.5 py-1 rounded">1.2K Active Members</span>
+<span class="bg-sage-light/30 px-2.5 py-1 rounded">+85% Registration</span>
+</div>
+</article>
+<!-- Project 3 -->
+<article class="polaroid-card p-4 rounded-xl flex flex-col justify-between">
+<div>
+<div class="relative overflow-hidden rounded-lg aspect-[16/10] bg-slate-200 mb-4 border border-sage-light">
+<img alt="EcoTrack Carbon Footprint Estimator" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtEVlN_xq4sR5L3ffZ658qyFM0RFFZfU-qPDANx3HrlIPjXJNW5eDZc3p_JEtlqhWGD6dS80eKkwnNCSBbaHy76g-DVO8pdon-qMYXQl8ybHN-YazRDVp8m3Oz-vrGYfL8wX4ayJvHMJA-9g9SUBuI196zZNyKJDkNT94vaER0aEaDKCRxjUQfqotVvnrMr-te2RUcAMAzlnf3oNwqNfXklvwz3wFi9W4o28bDLIYV">
+<span class="absolute top-2 left-2 bg-sage-dark text-cream text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
+                Web App / PWA
+              </span>
+</div>
+<h3 class="font-display text-xl text-sage-dark uppercase tracking-tight">EcoTrack Sustainability App</h3>
+<p class="text-xs text-ink/80 mt-2 font-medium leading-relaxed">
+              Lightweight sustainability mobile-first web app with automated carbon saving calculators, badges, and gamified social feeds.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-sage-light/30 flex items-center justify-between text-xs font-bold text-sage-dark">
+<span class="bg-sage-light/30 px-2.5 py-1 rounded">4.8★ Rating</span>
+<span class="bg-sage-light/30 px-2.5 py-1 rounded">18k Pageviews</span>
+</div>
+</article>
+</div>
+</section>
+<!-- END: Projects & Proven Results -->
+<!-- BEGIN: Tech Stack & Skillset Scrapbook -->
+<section class="scroll-mt-24" data-purpose="skills-section">
+<div class="bg-cream rounded-2xl p-6 sm:p-8 border border-sage-light shadow-md">
+<div class="flex flex-col sm:flex-row items-baseline justify-between mb-6 border-b border-sage-light pb-4">
+<h2 class="text-3xl sm:text-4xl font-display text-sage-dark uppercase tracking-tight">
+            CORE TECH STACK &amp; TOOLS
+          </h2>
+<span class="font-hand text-xl text-sage-dark font-bold">Tested in Production &amp; Classrooms</span>
+</div>
+<!-- Sticky Note Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-3">
+<div class="bg-cream-pure border border-sage-light p-3 rounded text-center shadow-sm">
+<span class="block font-mono text-xs font-bold text-sage-dark">JavaScript / TS</span>
+<span class="text-[10px] text-ink/70">Frontend Logic</span>
+</div>
+<div class="bg-cream-pure border border-sage-light p-3 rounded text-center shadow-sm">
+<span class="block font-mono text-xs font-bold text-sage-dark">React &amp; Next.js</span>
+<span class="text-[10px] text-ink/70">Modern UI</span>
+</div>
+<div class="bg-cream-pure border border-sage-light p-3 rounded text-center shadow-sm">
+<span class="block font-mono text-xs font-bold text-sage-dark">Tailwind CSS</span>
+<span class="text-[10px] text-ink/70">Styling &amp; Design</span>
+</div>
+<div class="bg-cream-pure border border-sage-light p-3 rounded text-center shadow-sm">
+<span class="block font-mono text-xs font-bold text-sage-dark">Node.js &amp; Python</span>
+<span class="text-[10px] text-ink/70">API &amp; Backend</span>
+</div>
+<div class="bg-cream-pure border border-sage-light p-3 rounded text-center shadow-sm">
+<span class="block font-mono text-xs font-bold text-sage-dark">PostgreSQL &amp; Mongo</span>
+<span class="text-[10px] text-ink/70">Database Modeling</span>
+</div>
+<div class="bg-cream-pure border border-sage-light p-3 rounded text-center shadow-sm">
+<span class="block font-mono text-xs font-bold text-sage-dark">Figma &amp; FigJam</span>
+<span class="text-[10px] text-ink/70">Wireframes &amp; UX</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Tech Stack & Skillset Scrapbook -->
+<!-- BEGIN: Services & Packages -->
+<section class="scroll-mt-24" data-purpose="services-packages" id="packages">
+<div class="text-center mb-12">
+<h2 class="text-4xl sm:text-5xl font-display text-cream uppercase tracking-tight">
+          SERVICES &amp; PACKAGES
+        </h2>
+<p class="font-hand text-2xl text-cream/90 mt-1">
+          ✦ Tailored collaboration offerings for brands and teams ✦
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+<!-- Package 1: Starter -->
+<div class="bg-cream-pure rounded-xl p-6 sm:p-8 flex flex-col justify-between border-2 border-sage-dark/20 relative shadow-md">
+<div>
+<span class="text-xs font-mono uppercase tracking-widest text-sage-dark font-bold">Entry Tier</span>
+<h3 class="font-display text-2xl text-sage-dark uppercase mt-1">STARTER AUDIT</h3>
+<p class="font-display text-4xl text-ink mt-3">$150 <span class="text-xs font-sans text-ink-soft">/ project</span></p>
+<ul class="mt-6 space-y-3 text-xs text-ink/80">
+<li class="flex items-center gap-2"><span>✔</span> 1 Landing page review or single web component</li>
+<li class="flex items-center gap-2"><span>✔</span> UI/UX accessibility checklist</li>
+<li class="flex items-center gap-2"><span>✔</span> Responsive viewport fixes (Mobile &amp; Desktop)</li>
+<li class="flex items-center gap-2"><span>✔</span> 3-day delivery window</li>
+</ul>
+</div>
+<a class="mt-8 block text-center py-2.5 px-4 bg-sage-dark hover:bg-ink text-cream text-xs font-bold uppercase rounded-full tracking-wider transition-colors" href="#contact">
+            Choose Starter
+          </a>
+</div>
+<!-- Package 2: Growth (Featured with Binder Clip) -->
+<div class="bg-cream-pure rounded-xl p-6 sm:p-8 flex flex-col justify-between border-2 border-sage-dark relative shadow-2xl scale-100 sm:scale-105 z-10">
+<div class="binder-clip"></div>
+<div>
+<div class="inline-block bg-sage-dark text-cream text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider mb-2">
+              Most Popular
+            </div>
+<h3 class="font-display text-2xl text-sage-dark uppercase">FULL WEB BUILD</h3>
+<p class="font-display text-4xl text-ink mt-3">$450 <span class="text-xs font-sans text-ink-soft">/ sprint</span></p>
+<ul class="mt-6 space-y-3 text-xs text-ink">
+<li class="flex items-center gap-2"><span>✔</span> Custom responsive website (up to 4 pages)</li>
+<li class="flex items-center gap-2"><span>✔</span> Modern tech stack: React / Tailwind CSS</li>
+<li class="flex items-center gap-2"><span>✔</span> Interactive CMS or API endpoints integrated</li>
+<li class="flex items-center gap-2"><span>✔</span> SEO basics, meta tags &amp; speed optimization</li>
+<li class="flex items-center gap-2"><span>✔</span> 2 revision cycles + 5-day delivery</li>
+</ul>
+</div>
+<a class="mt-8 block text-center py-3 px-4 bg-sage-dark hover:bg-ink text-cream text-xs font-bold uppercase rounded-full tracking-wider shadow-md transition-colors" href="#contact">
+            Choose Growth
+          </a>
+</div>
+<!-- Package 3: Scale / Content Partnership -->
+<div class="bg-cream-pure rounded-xl p-6 sm:p-8 flex flex-col justify-between border-2 border-sage-dark/20 relative shadow-md">
+<div>
+<span class="text-xs font-mono uppercase tracking-widest text-sage-dark font-bold">Partner Tier</span>
+<h3 class="font-display text-2xl text-sage-dark uppercase mt-1">TECH ADVOCACY</h3>
+<p class="font-display text-4xl text-ink mt-3">$850 <span class="text-xs font-sans text-ink-soft">/ month</span></p>
+<ul class="mt-6 space-y-3 text-xs text-ink/80">
+<li class="flex items-center gap-2"><span>✔</span> 3 dedicated developer reels / tutorial videos</li>
+<li class="flex items-center gap-2"><span>✔</span> Open-source starter repository &amp; docs</li>
+<li class="flex items-center gap-2"><span>✔</span> Community workshop / webinar co-hosting</li>
+<li class="flex items-center gap-2"><span>✔</span> Full organic &amp; paid usage rights (30 days)</li>
+</ul>
+</div>
+<a class="mt-8 block text-center py-2.5 px-4 bg-sage-dark hover:bg-ink text-cream text-xs font-bold uppercase rounded-full tracking-wider transition-colors" href="#contact">
+            Choose Partner
+          </a>
+</div>
+</div>
+</section>
+<!-- END: Services & Packages -->
+<!-- BEGIN: Testimonials Section -->
+<section class="scroll-mt-24" data-purpose="testimonials-section" id="testimonials">
+<div class="text-center mb-10">
+<h2 class="text-4xl sm:text-5xl font-display text-cream uppercase tracking-tight">
+          TESTIMONIALS
+        </h2>
+<p class="font-hand text-2xl text-cream/90 mt-1">What peers, project leads &amp; collaborators say</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+<!-- Review 1 -->
+<div class="polaroid-card p-5 rounded-xl border border-sage-light">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border border-sage-dark">
+<img alt="Sarah Tanaka portrait" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwNuLKUySpARW3uXBPqTC_LucGz1ESX6w5dVW3KFo2NN7tzWZGxxEGUd53yy_DkpVkmwvUasVFSIrONNMNsNyWPj4u0MkDKPjgOuK1M28IAl4EZoUEipIM4l7Vc0ciZeZHOlq0B08XknsqemZqLb5Ie5cShk6gcFX0VvenvX-89mk5eGjPuQGUKi1bxvFw4Ha9R_Xfqek5SHuA9E3GUfM0Vdf15Z3t7xSnJk-F908M">
+</div>
+<div>
+<h4 class="font-bold text-sm text-sage-dark">Sarah Tanaka</h4>
+<p class="text-[11px] text-ink-soft font-mono uppercase">Lead Dev @ EcoSolutions</p>
+</div>
+</div>
+<p class="text-xs text-ink leading-relaxed italic">
+            "Aurel turned our sluggish energy analytics dashboard into a clean, lightning-fast app that students and professors actually love using. Truly gifted at front-end precision."
+          </p>
+</div>
+<!-- Review 2 -->
+<div class="polaroid-card p-5 rounded-xl border border-sage-light">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border border-sage-dark">
+<img alt="Dimas Pratama portrait" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFpo0KL5UEaVEmbCHEH2CPBwVUA96cECtsWijv7HKKOecLqUnw4hrSiIKksfjy1Bz9LMSzVQFht0ybUnUZZQHQKjQuuhcNED_odDjUUnkEg-snMZWjAigyJhFAQl-ccbHaQnwzD_C7LV4nGgXtLHo07fhBMXMiZNVzxViqFW7hwXip5xgWHIJYohTLXY3HmambK6gs1oPe1sFIrEJ4Eh035WJTjWUaMlq_02_omtwt">
+</div>
+<div>
+<h4 class="font-bold text-sm text-sage-dark">Dimas Pratama</h4>
+<p class="text-[11px] text-ink-soft font-mono uppercase">Community Head @ PLN Devs</p>
+</div>
+</div>
+<p class="text-xs text-ink leading-relaxed italic">
+            "Reliable, sharp with modern JavaScript, and communicates progress clearly. Her tech tutorial videos brought in over 300 new applicants to our campus coding hackathon."
+          </p>
+</div>
+<!-- Review 3 -->
+<div class="polaroid-card p-5 rounded-xl border border-sage-light">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border border-sage-dark">
+<img alt="Nadia Arisandi portrait" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcXLTkUt_dmetEQR9FR5Al2OUcXjeW0HwmTGj_UEAo5y76Fedl5kAOhNKTga7xlVyZxoaGW3i8VOXcFHQd1E2xBiATU5Y7lXEJX8bkFESqOPyC-K3njJxdqexjYUMYDF67tKsat-yVvpmaKLQpWPNwK_jmfsi85iKIw_3RZK8f_rolSHWVeNqyTj_nN62jSyAWsVTPv4rZSaJVaRFLdGPbIKbDftZJU6L31_s1eTRx">
+</div>
+<div>
+<h4 class="font-bold text-sm text-sage-dark">Nadia Arisandi</h4>
+<p class="text-[11px] text-ink-soft font-mono uppercase">Product Manager @ EduTech Asia</p>
+</div>
+</div>
+<p class="text-xs text-ink leading-relaxed italic">
+            "Super professional and delivered earlier than our requested deadline. Her design sense paired with clean semantic code made onboarding our QA engineers effortless."
+          </p>
+</div>
+</div>
+</section>
+<!-- END: Testimonials Section -->
+<!-- BEGIN: Let's Connect / Footer Section -->
+<section class="scroll-mt-24 pt-6" data-purpose="contact-footer-section" id="contact">
+<div class="bg-cream rounded-2xl p-8 sm:p-12 shadow-xl border border-sage-light">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<!-- Call to Action Left -->
+<div class="md:col-span-8">
+<div class="washi-tape inline-block px-3 py-0.5 text-xs font-hand text-sage-dark font-bold mb-3">
+              Open for Internships &amp; Projects ✦
+            </div>
+<h2 class="text-5xl sm:text-6xl font-display text-sage-dark uppercase tracking-tight leading-tight">
+              LET'S CONNECT
+            </h2>
+<p class="text-ink text-sm sm:text-base font-medium mt-2 max-w-lg">
+              Ready to create technical solutions and digital content that resonates? Let’s talk about your next web project, internship, or speaking session.
+            </p>
+<div class="mt-6 flex flex-wrap gap-4 items-center">
+<a class="px-6 py-3 bg-sage-dark hover:bg-ink text-cream text-xs font-bold tracking-wider uppercase rounded-full shadow transition-all" href="mailto:azzahra.aurellia@itpln.ac.id">
+                Send an Email
+              </a>
+<a class="px-6 py-3 bg-sage-light/50 hover:bg-sage-light text-sage-dark text-xs font-bold tracking-wider uppercase rounded-full transition-all" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+                View LinkedIn
+              </a>
+</div>
+</div>
+<!-- Contact Mini Info Right -->
+<div class="md:col-span-4 bg-cream-pure p-6 rounded-xl border border-sage-light/60 text-xs text-ink space-y-3">
+<div>
+<span class="block font-mono uppercase text-[10px] text-ink-soft">Direct Email</span>
+<a class="font-bold text-sage-dark hover:underline" href="mailto:azzahra.aurellia@itpln.ac.id">azzahra.aurellia@itpln.ac.id</a>
+</div>
+<div>
+<span class="block font-mono uppercase text-[10px] text-ink-soft">Location</span>
+<span class="font-bold">Jakarta Barat, Indonesia (WIB)</span>
+</div>
+<div>
+<span class="block font-mono uppercase text-[10px] text-ink-soft">Social Profiles</span>
+<div class="flex gap-3 font-bold text-sage-dark mt-1">
+<a class="hover:underline" href="https://github.com">GitHub</a>
+<span>•</span>
+<a class="hover:underline" href="https://linkedin.com">LinkedIn</a>
+<span>•</span>
+<a class="hover:underline" href="https://instagram.com">Instagram</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Copyright Row -->
+<div class="mt-12 pt-6 border-t border-sage-light/50 flex flex-col sm:flex-row items-center justify-between text-xs text-ink-soft gap-4">
+<p>© 2026 Azzahra Aurellia Putri. All rights reserved.</p>
+<a class="flex items-center gap-1 font-bold text-sage-dark hover:underline uppercase text-[11px] tracking-wider" href="#hero">
+<span>↑ Back to top</span>
+</a>
+</div>
+</div>
+</section>
+<!-- END: Let's Connect / Footer Section -->
+</main>
+<!-- BEGIN: Interactive Behaviors & JSON Loader -->
+<script data-purpose="mock-data-and-interactions">
+    // Mock Data Loader structure as outlined in DOCUMENT_1 specifications
+    (async function initPortfolio() {
+      try {
+        console.log("Portfolio initialized: Azzahra Aurellia Putri (Aurel)");
+        // Graceful handling for JSON files if hosted statically
+        const endpoints = ['profil', 'hero', 'projects', 'services'];
+        // Attempt fetch if files exist, fallback cleanly to existing embedded DOM data
+      } catch (err) {
+        console.info("Using statically embedded DOM content", err);
+      }
+    })();
+  </script>
+<!-- END: Interactive Behaviors & JSON Loader -->
+
+
+</body></html>
